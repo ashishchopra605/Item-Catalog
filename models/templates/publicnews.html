@@ -1,0 +1,55 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+
+	{% for message in messages %}
+	<div class="alert alert-success" role="alert">
+		<strong>{{ message }} </strong>.
+	</div>
+	{% endfor %}
+
+	{% endif %}
+	{% endwith %}
+
+</div>
+<div class="container">
+	<div class="row">
+
+
+		<div class="jumbotron jumbo-color">
+			<h1>{{ Category.name }}</h1>
+			<p>{{ Category.description }}</p>
+
+
+		</div>
+
+		{% for i in news %}
+
+
+
+
+        <div class="col-md-12 ctg-style">
+        <div class="col-md-3">
+			<img src="{{i.imgurl}}" style="height: 320px; width: 260px;">
+		</div>
+			<div class="col-md-9 head-top"><h1>{{i.heading}}</h1></div>
+
+
+
+		<div class="col-md-9">
+		    <hr>
+			<article class="article-style">{{i.description.replace('\n', '<br>') | safe}} </article>
+		</div>
+		</div>
+		</div>
+		<br>
+		{% endfor %}
+
+	</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+
+	{% for message in messages %}
+	<div class="alert alert-success" role="alert">
+		<strong>{{ message }} </strong>.
+	</div>
+	{% endfor %}
+
+	{% endif %}
+	{% endwith %}
+
+</div>
+<div class="container">
+	<div class="row">
+
+		<div><div><figure class="creator pnl-title">
+        <img src="{{ creator.picture}}" width="80px;" height="80px;">
+        <figcaption>{{ creator.name }}</figcaption>
+      </figure></div>
+      </div>
+		<div class="jumbotron jumbo-color">
+			<h1>{{ Category.name }}</h1>
+			<p>{{ Category.description }}</p>
+
+			<a class="btn btn-primary btn-md" href="{{url_for('newNews' , Category_id = Category.id)}}" role="button">add news</a>
+			<a class="btn btn-primary btn-md" href="{{url_for('editCategory' , Category_id = Category.id)}}" role="button">edit category</a>
+			<a class="btn btn-primary btn-md" href="{{url_for('deleteCategory' , Category_id = Category.id)}}" role="button">delete category</a>
+
+		</div>
+
+		{% for i in news %}
+
+
+
+
+        <div class="col-md-12 ctg-style">
+        <div class="col-md-4">
+			<img src="{{i.imgurl}}" class="" style="width: 338px; height: 280px;">
+		</div>
+			<div class="col-md-6 head-top"><h1>{{i.heading}}</h1></div>
+		<div class="col-md-2 txtalgn mrgn-top">
+			<a href="{{url_for('editNews',Category_id=Category.id,news_id=i.id)}}">Edit</a>
+			<span>|</span>
+			<a href="{{url_for('deleteNews',Category_id=Category.id,news_id=i.id)}}">Delete</a>
+		</div>
+
+
+		<div class="col-md-8">
+		    <hr>
+			<article class="article-style">{{i.description.replace('\n', '<br>') | safe}} </article>
+		</div>
+		</div>
+		<br>
+		{% endfor %}
+
+	</div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div>
+ <h1 class="mrgn pnl-title"> News Category </h1>
+</div>
+
+
+
+<div class = 'flash'>
+  {% with messages = get_flashed_messages() %}
+  {% if messages %}
+
+  {% for message in messages %}
+  <div class="alert alert-success" role="alert">
+   <strong>{{ message }} </strong>.
+ </div>
+ {% endfor %}
+
+ {% endif %}
+ {% endwith %}
+
+</div>
+
+{% for category in news_category %}
+
+  <div class="ctg-style">
+  <div class="pnl-title">
+     <img src="{{category.imgurl}}" alt="Card image cap " class="img-style">
+  </div>
+  <div>
+  <hr>
+    <h4 class="pnl-title">{{category.name}}</h4>
+    <p >{{category.description.replace('\n', '<br>') | safe}}</p>
+    <hr>
+    <a href="{{url_for('showNews',Category_id=category.id)}}" class="btn btn-primary">Show News</a>
+  </div>
+</div>
+<br>
+{% endfor %}
+{% endblock %}

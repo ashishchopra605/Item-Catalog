@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+
+<div class="panel panel-default pnl">
+        <div class="panel-heading" >
+            <div class="post-title pnl-title">
+                <h3>Edit News</h3>
+            </div>
+        </div>
+        <div class="panel-body pnl-body">
+
+                <form method="post" class="pnl-title">
+
+                <div class="form-group">
+                       <label>Heading</label>
+                       <input type="text" name="news-heading"  class="form-control" value="{{editedNews.heading}}" required>
+                </div>
+                <div class="form-group">
+                       <label>Category : </label>&nbsp;
+
+                       <div class="form-group">
+                       <select required class="form-control">
+                              <option value="{{category.name}}" name="news-category" class="form-control">{{category.name}}</option>
+                       </select>
+                       </div>
+
+
+                </div>
+                <div class="form-group">
+                        <label>Image URL :</label><br>
+                        <input type="text" name="news-img" class="form-control" value="{{category.imgurl}}" required>
+                </div>
+                <div class="form-group">
+                       <label>Description</label><br>
+                       <textarea rows="10" cols="40" name="news-description" required>{{editedNews.description}}</textarea><br>
+                       <input type="submit" value="Edit" class="btn btn-primary mrgn ">
+                       <a href="{{url_for('showNews',Category_id=category.id)}}" class="btn btn-primary mrgn ">cancel</a>
+                </div>
+
+
+            </form>
+        </div>
+
+    </div>
+
+{% endblock %}

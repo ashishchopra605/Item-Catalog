@@ -1,0 +1,82 @@
+.bgcolor {
+
+	background-color: lightgrey !important;
+}
+
+.pnl {
+
+	width: 70%;
+	margin: 12%;
+}
+
+.pnl-title {
+
+	text-align: center;
+}
+
+.pnl-body {
+
+	background-color: lightgreen !important;
+
+}
+
+.frm {
+
+	text-align: center;
+}
+
+.mrgn {
+	margin: 10px !important;
+}
+.txtalgn {
+
+   text-align: right;
+}
+
+.nav-clr {
+
+	background-color: #555 !important;
+}
+
+.well-style {
+	text-align: center;
+	background-color: #00cc66 !important;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+
+.ctg-style {
+	border: 2px solid #73AD21;
+	border-radius: 25px;
+	padding: 20px;
+	 margin: 20px;
+}
+
+.img-style {
+
+	width: 318px;
+	height: 180px;
+}
+
+.mrgn-top {
+
+	margin-top: 45px;
+}
+.article-style {
+
+	border-left:thick solid #0000FF;
+	padding: 20px;
+}
+.jumbo-color {
+
+	background-color: #00cc66 !important;
+}
+.head-top {
+
+	margin-top: 10px !important;
+}
+.lgn-btn {
+
+	background-color: lightgreen !important;
+	text-align: center !important;
+}
