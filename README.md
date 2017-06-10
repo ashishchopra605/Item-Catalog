@@ -53,10 +53,11 @@ This is a RESTful web application using the Python framework Flask along with im
 
   -**Ubuntu 14.04 Note:** If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center, not the virtualbox.org web site. Due to a [reported bug](http://ubuntuforums.org/showthread.php?t=2227131), installing VirtualBox from the site may uninstall other software you need. 
 # usage
-  - Run the virtual machine!
-      - Open a terminal and execute:
-      - sudo apt-get install virtualbox  
-  - Clone this Repository and change directory to this project
-  - Now type in terminal  
-      - **python database_setup.py** to initialize the database.
-      - **python project.py** to run the Flask web server.
+
+- Run the virtual machine!
+    - Open a terminal and execute:
+    - sudo apt-get install virtualbox  
+- Clone this Repository and change directory to this project
+- Now type in terminal  
+    - **python database_setup.py** to initialize the database.
+    - **python project.py** to run the Flask web server.
