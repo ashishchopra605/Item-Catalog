@@ -23,6 +23,8 @@ The Item Catalog project consists of developing an application that provides a l
 	 
    ![category-image](https://raw.githubusercontent.com/ashishchopra605/Item-Catalog/master/images/category.png)
    
+   ![news-image](https://raw.githubusercontent.com/ashishchopra605/Item-Catalog/master/images/news.png)
+   
 ## Documentation
 
 This is a RESTful web application using the Python framework Flask along with implementing third-party OAuth authentication. Also, properly implementing authentication mechanisms and appropriately mapping HTTP methods to CRUD operations are core features of a properly secured web application.   
