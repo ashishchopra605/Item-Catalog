@@ -9,9 +9,9 @@
 ## table of contents
 
 - [Quick start](#quick-start)
-- [Documentation](#Documentation)
+- [Documentation](#documentation)
 - [Setup](#setup)
-- [How To Run](#How To Run)
+- [Usage](#usage)
 
 ## quick-start
 The Item Catalog project consists of developing an application that provides a list of items within a variety of categories, as well as provide a user registration and authentication system.
@@ -44,22 +44,19 @@ This is a RESTful web application using the Python framework Flask along with im
     - pip install oauth2client
     - pip install requests
     - pip install httplib2
-
-## How To Run
-
-  ##virtualbox 
- 
-     - VirtualBox is the software that actually runs the VM. [You can download it from virtualbox.org, here.]  (https://www.virtualbox.org/wiki/Downloads)  Install the *platform package* for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it. 
-
-     - Run the virtual machine!
-
-          - Open a terminal and execute:
     
-              - sudo apt-get install virtualbox
 
-     - **Ubuntu 14.04 Note:** If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center, not the virtualbox.org web site. Due to a [reported bug](http://ubuntuforums.org/showthread.php?t=2227131), installing VirtualBox from the site may uninstall other software you need. 
-  
-- Clone this Repository and change directory to this project
-- Now type in terminal  
-    - **python database_setup.py** to initialize the database.
-    - **python project.py** to run the Flask web server.
+
+ # virtualbox 
+ 
+  -VirtualBox is the software that actually runs the VM. [You can download it from virtualbox.org, here.]  (https://www.virtualbox.org/wiki/Downloads)  Install the *platform package* for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it. 
+
+  -**Ubuntu 14.04 Note:** If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center, not the virtualbox.org web site. Due to a [reported bug](http://ubuntuforums.org/showthread.php?t=2227131), installing VirtualBox from the site may uninstall other software you need. 
+# usage
+  - Run the virtual machine!
+      - Open a terminal and execute:
+      - sudo apt-get install virtualbox  
+  - Clone this Repository and change directory to this project
+  - Now type in terminal  
+      - **python database_setup.py** to initialize the database.
+      - **python project.py** to run the Flask web server.
