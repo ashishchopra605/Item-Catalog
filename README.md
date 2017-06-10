@@ -11,6 +11,7 @@
 - [Quick start](#quick-start)
 - [Documentation](#Documentation)
 - [Setup](#setup)
+- [How To Run](#How To Run)
 
 ## quick-start
 The Item Catalog project consists of developing an application that provides a list of items within a variety of categories, as well as provide a user registration and authentication system.
@@ -19,6 +20,7 @@ The Item Catalog project consists of developing an application that provides a l
 	 - Selecting a specific item shows you specific information of that item.
 	 - After logging in, a user has the ability to add, update, or delete item info.
 	 - The application provides a JSON endpoint, at the very least.
+	 
    ![category-image](https://raw.githubusercontent.com/ashishchopra605/Item-Catalog/master/images/category.png)
    
 ## Documentation
@@ -43,3 +45,21 @@ This is a RESTful web application using the Python framework Flask along with im
     - pip install requests
     - pip install httplib2
 
+## How To Run
+
+  ##virtualbox 
+ 
+     - VirtualBox is the software that actually runs the VM. [You can download it from virtualbox.org, here.]  (https://www.virtualbox.org/wiki/Downloads)  Install the *platform package* for your operating system.  You do not need the extension pack or the SDK. You do not need to launch VirtualBox after installing it. 
+
+     - Run the virtual machine!
+
+          - Open a terminal and execute:
+    
+              - sudo apt-get install virtualbox
+
+     - **Ubuntu 14.04 Note:** If you are running Ubuntu 14.04, install VirtualBox using the Ubuntu Software Center, not the virtualbox.org web site. Due to a [reported bug](http://ubuntuforums.org/showthread.php?t=2227131), installing VirtualBox from the site may uninstall other software you need. 
+  
+- Clone this Repository and change directory to this project
+- Now type in terminal  
+    - **python database_setup.py** to initialize the database.
+    - **python project.py** to run the Flask web server.
