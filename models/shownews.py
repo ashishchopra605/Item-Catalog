@@ -1,3 +1,7 @@
+'''
+  this file display news.
+'''
+
 from models.userhelper import *
 from models.db import *
 

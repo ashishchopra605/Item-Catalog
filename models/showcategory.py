@@ -1,3 +1,7 @@
+'''
+  this file contains show news category function.
+'''
+
 from models.db import *
 
 

@@ -1,3 +1,7 @@
+'''
+  this file includes JSON endpoints.
+'''
+
 from models.db import *
 
 

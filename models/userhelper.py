@@ -1,5 +1,5 @@
 from models.db import *
-
+from functools import wraps
 # User Helper Functions
 
 
@@ -23,3 +23,15 @@ def getUserID(email):
         return user.id
     except:
         return None
+
+
+# login_decorator
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if 'username' in login_session:
+            return f(*args, **kwargs)
+        else:
+            flash('You are not allowed to access there')
+            return redirect('/login')
+    return decorated_function

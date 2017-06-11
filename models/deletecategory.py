@@ -1,16 +1,24 @@
+'''
+  this file delete category.
+'''
+
 from models.login import *
 from models.showcategory import *
 from models.db import *
+from models.userhelper import *
 
 
 # Delete a Category
 @app.route('/category/<int:Category_id>/delete/', methods=['GET', 'POST'])
+@login_required
 def deleteCategory(Category_id):
-    if 'username' not in login_session:
-        return redirect('/login')
     CategoryToDelete = session.query(
         Category).filter_by(id=Category_id).one()
     if request.method == 'POST':
+        if CategoryToDelete.user_id != login_session['user_id']:
+            return redirect(url_for('shownewscategory',
+                                    Category_id=Category_id))
+
         news_to_category = session.query(
             News).filter_by(id=Category_id).all()
 

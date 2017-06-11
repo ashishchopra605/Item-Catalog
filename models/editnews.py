@@ -1,17 +1,24 @@
+'''
+  this file includes edit News function.
+'''
+
 from models.login import *
 from models.shownews import *
 from models.db import *
+from models.userhelper import *
 
 
 # Edit a news
 @app.route('/category/<int:Category_id>/news/<int:news_id>/edit',
            methods=['GET', 'POST'])
+@login_required
 def editNews(Category_id, news_id):
-    if 'username' not in login_session:
-        return redirect('/login')
     editedNews = session.query(News).filter_by(id=news_id).one()
     category = session.query(Category).filter_by(id=Category_id).one()
     if request.method == 'POST':
+        if editedNews.user_id != login_session['user_id']:
+            return redirect(url_for('showNews', Category_id=Category_id))
+
         if request.form['news-heading']:
             editedNews.heading = request.form['news-heading']
         if request.form['news-description']:

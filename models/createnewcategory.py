@@ -1,13 +1,17 @@
+'''
+  this file creates new category.
+'''
+
 from models.login import *
 from models.showcategory import *
 from models.db import *
+from models.userhelper import *
 
 
 # Create a new Category
 @app.route('/category/new/', methods=['GET', 'POST'])
+@login_required
 def newCategory():
-    if 'username' not in login_session:
-        return redirect('/login')
     if request.method == 'POST':
         newCategory = Category(
             name=request.form['category-name'],

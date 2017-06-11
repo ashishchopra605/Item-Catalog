@@ -13,6 +13,7 @@
 				<form method="post" class="pnl-title">
                  <input type="submit" value='Delete' class="btn btn-primary mrgn">
                  <a href="{{url_for('showNews',Category_id=CategoryToDelete.id)}}" class="btn btn-primary mrgn">cancel</a>
+                 <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
 			</form>
 
 		</div>
