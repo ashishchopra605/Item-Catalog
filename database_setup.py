@@ -43,9 +43,9 @@ class News(Base):
     imgurl = Column(String(250), nullable=False)
     description = Column(TEXT)
     category_id = Column(Integer, ForeignKey('news_category.id'))
-    category = relationship(Category, backref=backref("items", cascade="all, delete-orphan"))
+    category = relationship(Category, backref=backref("news", cascade="all, delete-orphan"))
     user_id = Column(Integer, ForeignKey('user.id'))
-    user = relationship(User, backref="items")
+    user = relationship(User, backref="news")
 
     @property
     def serialize(self):
